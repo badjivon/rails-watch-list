@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="flexbox d-flex">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="car">
+        <div class="card-product m-3">
+          <%= image_tag (bookmark.movie.poster_url) %>
+          <div class="card-product-infos">
+            <h2><%= bookmark.movie.title %></h2>
+            <p><%= bookmark.comment %></p>
+            <p><%= link_to "supp", bookmark_path, method: :delete %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+
+</div>
+
+
+<%= link_to "New bookmark", new_list_bookmark_path(@list) %>
+</div>
