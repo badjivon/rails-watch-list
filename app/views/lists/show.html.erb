@@ -7,7 +7,7 @@
           <div class="card-product-infos">
             <h2><%= bookmark.movie.title %></h2>
             <p><%= bookmark.comment %></p>
-            <p><%= link_to "supp", bookmark_path, method: :delete %></p>
+            <p><%= link_to "supp", bookmark_path(bookmark), method: :delete %></p>
           </div>
         </div>
       </div>
